@@ -20,6 +20,6 @@ spec:
         image: karthiksaigummalapu/ngnix:v1
         ports:
         - containerPort: 80
-imagepullsecrets:
+      imagePullSecrets:
       -name: karthik-secret
 ---
