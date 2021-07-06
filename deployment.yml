@@ -1,0 +1,24 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: karthikdeployment
+  labels:
+    app: karthiknginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: karthiknginx
+  template:
+    metadata:
+      labels:
+        app: karthiknginx
+    spec:
+      containers:
+      - name: karthiknginx
+        image: karthiksaigummalapu/ngnix:v1
+        ports:
+        - containerPort: 80
+imagepullsecrets:
+      -name: karthik-secret
