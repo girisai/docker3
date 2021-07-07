@@ -42,7 +42,7 @@ spec:
       - name: karthik-secret
 ---
 apiVersion: apps/v1
-kind: ConfigMap
+kind: configMap
 metadata:
   name: karthikdeployment
 data:
