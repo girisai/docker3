@@ -35,6 +35,16 @@ spec:
         image: karthiksaigummalapu/ngnix:v1
         ports:
         - containerPort: 80
+        envFrom:
+          - configMapRef:
+              name: karthikdeployment
       imagePullSecrets:
       - name: karthik-secret
+---
+apiVersion: apps/v1
+kind: ConfigMap
+metadata:
+  name: karthikdeployment
+data:
+  x: "karthik"
 ---
